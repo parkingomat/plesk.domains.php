@@ -1,5 +1,5 @@
 {
-  "name": "parkingomat/plesk.domains",
+  "name": "parkingomat/plesk.domains.php",
   "description": "Plesk api client to get all domains",
   "authors": [
     {

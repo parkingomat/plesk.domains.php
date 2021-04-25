@@ -1,1 +1,1 @@
-php composer.phar update
+php composer.phar install

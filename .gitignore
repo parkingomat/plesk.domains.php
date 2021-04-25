@@ -1,3 +1,5 @@
+.idea/
+packagist.bat
 # Logs
 logs
 *.log
