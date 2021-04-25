@@ -1,2 +1,25 @@
 # plesk.domains.php
-PLesk api client to get all domains
+Plesk api client to get all domains
+
+## install 
+
+windows
+
+    install.bat
+
+
+linux
+
+    ./install.sh
+
+
+## install 
+
+windows
+
+    start.bat
+
+
+linux
+
+    ./start.sh
