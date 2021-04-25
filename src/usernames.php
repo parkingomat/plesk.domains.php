@@ -11,9 +11,6 @@ if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
     header_json(['GET'=> 'empty']);
 }
 
-
-
-$data = [];
 $objs = new LetJson("../../plesk.json");
 $objs->each(function ($obj) {
 //    var_dump($obj->host);
