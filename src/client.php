@@ -1,4 +1,7 @@
 <?php
+
+namespace parkingomat\PleskDomainsPhp;
+
 // https://zetcode.com/php/getpostrequest/
 // php composer.phar req symfony/http-client
 

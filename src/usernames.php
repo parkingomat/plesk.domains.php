@@ -1,4 +1,5 @@
 <?php
+namespace parkingomat\PleskDomainsPhp;
 
 require('../vendor/autoload.php');
 

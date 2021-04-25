@@ -20,12 +20,12 @@
   },
   "autoload": {
     "psr-4": {
-      "parkingomat\\plesk.domains.php\\": "src/"
+      "parkingomat\\PleskDomainsPhp\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "parkingomat\\plesk.domains.php\\": "tests/"
+      "parkingomat\\PleskDomainsPhp\\": "tests/"
     }
   },
   "scripts": {

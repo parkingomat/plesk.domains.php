@@ -1,4 +1,5 @@
 <?php
+namespace parkingomat\PleskDomainsPhp;
 
 function getDomainsFromHost($obj, $domains = [])
 {
