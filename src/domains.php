@@ -1,4 +1,5 @@
 <?php
+
 namespace parkingomat\PleskDomainsPhp;
 
 require('../vendor/autoload.php');
@@ -6,21 +7,29 @@ require('../vendor/autoload.php');
 include('header_json.php');
 include('getDomainsFromHost.php');
 
-
 if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
-    header_json(['GET'=> 'empty']);
+    header_json(['GET' => 'empty']);
 }
 
 use letjson\LetJson;
 
-$data = [];
 $objs = new LetJson("../../plesk.json");
-$objs->each(function ($obj) {
-//    var_dump($obj->host);
-//    var_dump($_POST);
-    if ($obj->host === $_GET['hostname']) {
-        $data = getDomainsFromHost($obj, []);
-        header_json($data);
-    }
-});
+
+if (empty($_GET['hostname'])) {
+    $data = [];
+    $objs->each(function ($obj) {
+        global $data;
+        $data[] = getDomainsFromHost($obj, []);
+    });
+    header_json($data);
+
+} else {
+
+    $objs->each(function ($obj) {
+        if ($obj->host === $_GET['hostname']) {
+            $data = getDomainsFromHost($obj, []);
+            header_json($data);
+        }
+    });
+}
 

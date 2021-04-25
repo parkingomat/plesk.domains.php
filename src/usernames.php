@@ -13,11 +13,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
 
 use letjson\LetJson;
 
-
 $objs = new LetJson("../../plesk.json");
 $objs->each(function ($obj) {
-//    var_dump($obj->host);
-//    var_dump($_POST);
     if ($obj->host === $_GET['hostname']) {
         $data = getDomainsFromHost($obj, []);
         header_json($data);

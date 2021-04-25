@@ -1,6 +1,10 @@
 <?php
+namespace parkingomat\PleskDomainsPhp;
 
-function header_json($data)
+/**
+ * @param array $data
+ */
+function header_json(array $data)
 {
     header('Content-Type: application/json');
     $json = json_encode($data);

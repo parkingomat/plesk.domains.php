@@ -1,6 +1,11 @@
 <?php
 namespace parkingomat\PleskDomainsPhp;
 
+/**
+ * @param $obj
+ * @param array $domains
+ * @return array|mixed
+ */
 function getDomainsFromHost($obj, $domains = [])
 {
     $ip = $obj->ip;
