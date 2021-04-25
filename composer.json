@@ -17,8 +17,7 @@
     "php": "^7.3",
     "ext-curl": "*",
     "plesk/api-php-lib": "^1.0",
-    "symfony/http-client": "^5.2",
-    "parkingomat/plesk.domains.php": "dev-master"
+    "symfony/http-client": "^5.2"
   },
   "require-dev": {
     "phpunit/phpunit": "^9",
