@@ -7,17 +7,12 @@
       "email": "info@softreck.dev"
     }
   ],
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/parkingomat/plesk.domains.php"
-    }
-  ],
   "require": {
     "php": "^7.3",
     "ext-curl": "*",
     "plesk/api-php-lib": "^1.0",
-    "symfony/http-client": "^5.2"
+    "symfony/http-client": "^5.2",
+    "letjson/composer": "dev-main"
   },
   "require-dev": {
     "phpunit/phpunit": "^9",
@@ -25,12 +20,18 @@
   },
   "autoload": {
     "psr-4": {
-      "\\": "src/"
+      "parkingomat\\plesk.domains.php\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "\\": "tests/"
+      "parkingomat\\plesk.domains.php\\": "tests/"
     }
+  },
+  "scripts": {
+    "start": "php -S 0.0.0.0:8080 -t src"
+  },
+  "config": {
+    "process-timeout": 0
   }
 }

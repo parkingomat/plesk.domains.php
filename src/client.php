@@ -7,9 +7,10 @@ require('../vendor/autoload.php');
 use Symfony\Component\HttpClient\HttpClient;
 
 
-// http://localhost:8080/panel/plesk/domains.php?hostname=apifoundation.com
-//$url = 'http://localhost:8080/panel/plesk/domains.php?hostname=apifoundation.com';
-$url = 'http://localhost:8080/panel/plesk/domains.php';
+// http://localhost:8080/domains.php?hostname=apifoundation.com
+//$url = 'http://localhost:8080/domains.php?hostname=apifoundation.com';
+$url = 'http://localhost:8080/src/domains.php';
+
 $httpClient = HttpClient::create();
 $response = $httpClient->request('GET', $url, [
     'query' => [
@@ -21,7 +22,7 @@ echo $content . "\n";
 
 die;
 
-$url = 'http://localhost:8080/panel/host_domains.php';
+$url = 'http://localhost:8080/src/host_domains.php';
 
 $httpClient = HttpClient::create();
 $response = $httpClient->request('POST', $url, [
@@ -34,7 +35,7 @@ echo $content . "\n";
 
 
 die;
-$url = 'http://localhost:8080/panel/domains.php';
+$url = 'http://localhost:8080/src/domains.php';
 
 $httpClient = HttpClient::create();
 $response = $httpClient->request('POST', $url, [

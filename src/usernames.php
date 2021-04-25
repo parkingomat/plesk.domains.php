@@ -2,7 +2,6 @@
 
 require('../vendor/autoload.php');
 
-include("LetJson.php");
 include('header_json.php');
 include('getDomainsFromHost.php');
 
@@ -10,6 +9,9 @@ include('getDomainsFromHost.php');
 if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
     header_json(['GET'=> 'empty']);
 }
+
+use letjson\LetJson;
+
 
 $objs = new LetJson("../../plesk.json");
 $objs->each(function ($obj) {
