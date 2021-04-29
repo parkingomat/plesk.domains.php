@@ -3,9 +3,12 @@ Plesk api client to get all domains
 
 [parkingomat/plesk.domains.php: PLesk api client to get all domains](https://github.com/parkingomat/plesk.domains.php)
 
+## packagist
+[parkingomat/plesk.domains.php - Packagist](https://packagist.org/packages/parkingomat/plesk.domains.php)
+https://packagist.org/packages/parkingomat/plesk.domains.php
+
 
 ## composer package name
-https://packagist.org/packages/parkingomat/plesk.domains.php
 
     "parkingomat/plesk.domains.php"
 
