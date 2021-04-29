@@ -5,6 +5,7 @@ Plesk api client to get all domains
 
 
 ## composer package name
+https://packagist.org/packages/parkingomat/plesk.domains.php
 
     "parkingomat/plesk.domains.php"
 
