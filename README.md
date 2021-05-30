@@ -3,6 +3,27 @@ Plesk api client to get all domains
 
 [parkingomat/plesk.domains.php: PLesk api client to get all domains](https://github.com/parkingomat/plesk.domains.php)
 
+# First Steps
+
+## on linux
+
+### install
+    sh .apicra\install.sh
+
+### start
+    sh .apicra\start.sh
+
+## on windows
+
+### install
+    .apicra\install.bat
+
+### start
+    .apicra\start.bat
+
+
+
+
 ## packagist
 [parkingomat/plesk.domains.php - Packagist](https://packagist.org/packages/parkingomat/plesk.domains.php)
 https://packagist.org/packages/parkingomat/plesk.domains.php
@@ -13,6 +34,9 @@ https://packagist.org/packages/parkingomat/plesk.domains.php
     "parkingomat/plesk.domains.php"
 
 ## package install
+
+todo:
+php.parkingomat.com/plesk.domains.php
 
 with local composer.phar file
 
@@ -27,25 +51,7 @@ global installed composer in system
 
     php composer.phar install
 
-## install 
 
-windows
+---
 
-    install.bat
-
-
-linux
-
-    ./install.sh
-
-
-## install 
-
-windows
-
-    start.bat
-
-
-linux
-
-    ./start.sh
++ [edit](https://github.com/parkingomat/plesk.domains.php/edit/main/README.md)
