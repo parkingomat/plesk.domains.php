@@ -8,10 +8,10 @@ Plesk api client to get all domains
 ## on linux
 
 ### install
-    sh .apicra\install.sh
+    sh .apicra\install
 
 ### start
-    sh .apicra\start.sh
+    sh .apicra\start
 
 ## on windows
 
@@ -22,6 +22,8 @@ Plesk api client to get all domains
     .apicra\start.bat
 
 
+### open in browser
+    .apicra\browser.bat
 
 
 ## packagist
