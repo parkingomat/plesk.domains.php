@@ -5,6 +5,10 @@ Plesk api client to get all domains
 
 # First Steps
 
+start by composer
+
+    php composer.phar start
+
 ## on linux
 
 ### install
