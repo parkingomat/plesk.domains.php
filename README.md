@@ -3,6 +3,57 @@ Plesk api client to get all domains
 
 [parkingomat/plesk.domains.php: PLesk api client to get all domains](https://github.com/parkingomat/plesk.domains.php)
 
+
+# api
+API with OpenApi (Swagger)  documentation based on Nodejs
+
+## Functions
++ user auth
++ obsluga API github
++ komunikacja z github
++ komunikacja z PLESK
++ deploy from github to plesk
+
+
+Statystyki:
+
+Lista ostatnio wygenerowanych paczek
+
+Lista plikow uzywanchy i wersji
+
+
+
+podpowiedzi
+
+Gdzie mozna dodac nowa wersje
+
+Testowanie jakosci kodu
+
+Mozliwosc za pomoca jednego klineiecia
+
+Lub podania pliku
+
+Oda razu og edytowac
+
+
+
+## TODO
+
++ support by PROMAGEN
+
+one file to start promagen project
+
+
+## API foundation
+
+.promagen - web management dla devops
+.apicra - skrypty do instalacji env
+.apifunc - funkcje, implementacja apiunit
+.apiunit - metadane potrzebne do stworzenia aplikacji
+.apibuild - budowanie plaikacji, deployment
+
+
+
 # First Steps
 
 start by composer
