@@ -93,10 +93,124 @@ https://packagist.org/packages/parkingomat/plesk.domains.php
 
     "parkingomat/plesk.domains.php"
 
+
+
+TODO:
+
+.apiterminal
+
 ## package install
 
-todo:
-php.parkingomat.com/plesk.domains.php
+
+## Install on raspbian
+
+Raspbian config
+
+https://www.tomshardware.com/reviews/raspberry-pi-headless-setup-how-to,6028.html
+
+Clean
+
+    apt-get autoremove -y
+
+Update
+
+    sudo apt update -y
+
+Upgrade
+
+    sudo apt-get upgrade --yes
+
+GIT INSTALL
+
+    sudo apt install -y git
+
+GIT CLONE
+
+    git clone https://github.com/parkingomat/plesk.domains.php.git && cd plesk.domains.php
+
+
+### Install PHP 7 and common modules
+Install PHP
+```
+sudo apt install -y php
+php -v
+```
+
+Install modules
+```
+sudo apt install -y php7.3-cli php7.3-fpm \
+php7.3-opcache php7.3-curl php7.3-mbstring \
+php7.3-pgsql php7.3-zip php7.3-xml php7.3-gd
+```
+
+Update composer dependencies
+
+```
+php composer.phar install
+
+sh .apicra/install
+
+sudo php -S 0.0.0.0:8080 -t src
+
+sh .apicra/start
+```
+
+raspberrypi:8080
+
+raspberrypi:8080/domains.php
+
+Config
+    
+    sudo nano /etc/php/7.3/cli/php.ini
+
+
+NOTICE: To enable PHP 7.3 FPM in Apache2 do:
+NOTICE: a2enmod proxy_fcgi setenvif
+NOTICE: a2enconf php7.3-fpm
+
+### Add the PHP repository
+
+So how to get a fresh version of PHP then ? Luckily the Debian PHP maintainer hosts a repository with fresh version of PHP and it includes armhf (armv7 only!) versions too. Lets start by adding the repository PGP key:
+```
+wget -q https://packages.sury.org/php/apt.gpg -O- | sudo apt-key add -
+```
+And add the PHP repository to your apt sources
+```
+echo "deb https://packages.sury.org/php/ buster main" | sudo tee /etc/apt/sources.list.d/php7.list
+```
+Update repository pacakge index
+```
+sudo apt update
+```
+In case apt complains about "The method driver /usr/lib/apt/methods/https could not be found", install the following optional packages:
+```
+sudo apt install ca-certificates apt-transport-https
+```
+
+Install Apache and FastCGI module
+
+Next we will install Apache and the required extra module for FastCGI support:
+
+```
+sudo apt install apache2 libapache2-mod-fcgid
+```
+
+## Apache 2
+
+Enable fpm proxy moudle and php-fpm configuration
+
+```
+sudo a2enmod proxy_fcgi
+sudo a2enconf php7.3-fpm
+```
+
+And reload Apache
+
+```
+sudo systemctl reload apache2
+```
+
+## install on windows
 
 with local composer.phar file
 
